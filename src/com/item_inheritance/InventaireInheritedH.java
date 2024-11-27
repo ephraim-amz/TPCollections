@@ -12,7 +12,7 @@ public class InventaireInheritedH extends HashMap<String, Item> {
     private int aPrixTotal;
 
     /**
-     * InventaireH instance constructor
+     * InventaireInheritedH instance constructor
      */
     public InventaireInheritedH() {
         this.aPrixTotal = 0;
@@ -65,7 +65,7 @@ public class InventaireInheritedH extends HashMap<String, Item> {
     }
 
     /**
-     * Adds a literal presentation of an InventaireS
+     * Adds a literal presentation of an InventaireInheritedS
      *
      * @return the instance represented as a String
      * @see Object#toString()

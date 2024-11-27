@@ -71,7 +71,7 @@ public class InventaireInheritedS extends HashSet<Item> {
     }
 
     /**
-     * Adds a literal presentation of an InventaireInheratedS
+     * Adds a literal presentation of an InventaireInheritedS
      *
      * @return the instance represented as a String
      * @see Object#toString()
