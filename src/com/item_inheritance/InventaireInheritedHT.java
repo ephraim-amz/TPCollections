@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 
 /**
  * Public class for an inventaire using the TreeMap data structure
+ *
+ * @see java.util.TreeMap
  */
 public class InventaireInheritedHT extends TreeMap<String, Item>{
     private int aPrixTotal;
@@ -62,7 +64,7 @@ public class InventaireInheritedHT extends TreeMap<String, Item>{
     public void enleverItem(String nom) {
         if (contientItem(nom)) {
             aPrixTotal -= getItem(nom).getaPrix();
-            remove(getItem(nom));
+            remove(nom);
         }
     }
 

@@ -9,14 +9,15 @@ import java.util.stream.Collectors;
 
 /**
  * Public class for an inventaire, a class that uses the Item class for collection operations purposes
+ *
  * @author ephraim
+ * @see java.util.ArrayList
  */
-public class InventaireInherited extends ArrayList<Item>{
+public class InventaireInherited extends ArrayList<Item> {
     private int aPrixTotal;
 
     /**
      * InventaireInherited instance constructor
-     *
      */
     public InventaireInherited() {
         this.aPrixTotal = 0;
@@ -28,11 +29,11 @@ public class InventaireInherited extends ArrayList<Item>{
      * @param nom the Item name
      * @return the {@code Item} instance if found or {@code null} if not found
      */
-    public Item getItem(String nom){
-       return this
-               .stream()
-               .filter(i -> i.getaNom().equals(nom))
-               .findFirst().orElse(null);
+    public Item getItem(String nom) {
+        return this
+                .stream()
+                .filter(i -> i.getaNom().equals(nom))
+                .findFirst().orElse(null);
     }
 
     /**
@@ -41,18 +42,18 @@ public class InventaireInherited extends ArrayList<Item>{
      * @param nom the name of the Item wanted
      * @return {@code true} if the Item is found otherwise {@code false}
      */
-    public boolean contientItem(String nom){
+    public boolean contientItem(String nom) {
         return getItem(nom) != null;
     }
 
     /**
      * Adds an Item inside the inventaire list
      *
-     * @param nom The name of the new Item to be created
+     * @param nom  The name of the new Item to be created
      * @param prix The price of the new Item to be created
      */
-    public void ajouterItem(String nom, int prix){
-        if(!contientItem(nom)){
+    public void ajouterItem(String nom, int prix) {
+        if (!contientItem(nom)) {
             add(new Item(nom, prix));
             aPrixTotal += prix;
         }
@@ -63,8 +64,8 @@ public class InventaireInherited extends ArrayList<Item>{
      *
      * @param nom The name of the new Item to be deleted
      */
-    public void enleverItem(String nom){
-        if(contientItem(nom)){
+    public void enleverItem(String nom) {
+        if (contientItem(nom)) {
             aPrixTotal -= getItem(nom).getaPrix();
             remove(getItem(nom));
         }
@@ -73,15 +74,24 @@ public class InventaireInherited extends ArrayList<Item>{
     /**
      * Sorts in ascending order the current list of items
      */
-    public void trieC(){
+    public void trieC() {
         Collections.sort(this);
     }
 
     /**
      * Sorts in reverse order the current list of items
      */
-    public void trieD(){
+    public void trieD() {
         this.sort(Collections.reverseOrder());
+    }
+
+
+    /**
+     * Sums the price of all the currents items inside the collection
+     */
+    public int getAPrixTotal() {
+        this.aPrixTotal = this.stream().mapToInt(Item::getaPrix).sum();
+        return this.aPrixTotal;
     }
 
     /**
@@ -92,7 +102,9 @@ public class InventaireInherited extends ArrayList<Item>{
      */
     @Override
     public String toString() {
-        StringBuilder sb = this.stream().map(Item::toString).collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
-        return String.format("%s : %d", sb, aPrixTotal);
+        StringBuilder sb = new StringBuilder(this.stream()
+                .map(Item::toString)
+                .collect(Collectors.joining(" , ")));
+        return String.format("%s : %d", sb, getAPrixTotal());
     }
 }

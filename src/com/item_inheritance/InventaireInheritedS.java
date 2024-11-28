@@ -3,10 +3,13 @@ package com.item_inheritance;
 import com.item.Item;
 
 import java.util.HashSet;
+import java.util.stream.Collectors;
 
 /**
  * Public class for an inventaire, a class that uses the Item class for HashSet collection operations
+ *
  * @author ephraim
+ * @see java.util.HashSet
  */
 public class InventaireInheritedS extends HashSet<Item> {
     private int aPrixTotal;
@@ -78,6 +81,9 @@ public class InventaireInheritedS extends HashSet<Item> {
      */
     @Override
     public String toString() {
-        return String.format("%s : %d", toString(), aPrixTotal);
+        StringBuilder bd = new StringBuilder(
+                this.stream().map(Item::toString).collect(Collectors.joining(" , "))
+        );
+        return String.format("%s : %d", bd, aPrixTotal);
     }
 }
