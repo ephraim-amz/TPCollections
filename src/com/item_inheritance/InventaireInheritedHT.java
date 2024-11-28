@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 
 /**
  * Public class for an inventaire using the TreeMap data structure
+ *
+ * @see java.util.TreeMap
  */
 public class InventaireInheritedHT extends TreeMap<String, Item>{
     private int aPrixTotal;

@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
  * Public class for an inventaire, a class that uses the Item class for collection operations purposes
  *
  * @author ephraim
+ * @see java.util.ArrayList
  */
 public class InventaireInherited extends ArrayList<Item> {
     private int aPrixTotal;

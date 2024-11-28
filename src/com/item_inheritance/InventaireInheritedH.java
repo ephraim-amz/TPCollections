@@ -7,6 +7,8 @@ import java.util.stream.Collectors;
 
 /**
  * Public class for an inventaire using the Map data structure
+ *
+ * @see java.util.HashMap
  */
 public class InventaireInheritedH extends HashMap<String, Item> {
     private int aPrixTotal;

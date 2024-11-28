@@ -6,7 +6,9 @@ import java.util.HashSet;
 
 /**
  * Public class for an inventaire, a class that uses the Item class for HashSet collection operations
+ *
  * @author ephraim
+ * @see java.util.HashSet
  */
 public class InventaireInheritedS extends HashSet<Item> {
     private int aPrixTotal;
