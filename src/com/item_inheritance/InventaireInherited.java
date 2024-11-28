@@ -87,7 +87,7 @@ public class InventaireInherited extends ArrayList<Item> {
 
 
     /**
-     *
+     * Sums the price of all the currents items inside the collection
      */
     public int getAPrixTotal() {
         this.aPrixTotal = this.stream().mapToInt(Item::getaPrix).sum();

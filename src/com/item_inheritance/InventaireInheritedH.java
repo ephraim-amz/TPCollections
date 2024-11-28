@@ -62,7 +62,7 @@ public class InventaireInheritedH extends HashMap<String, Item> {
     public void enleverItem(String nom) {
         if (contientItem(nom)) {
             aPrixTotal -= getItem(nom).getaPrix();
-            remove(getItem(nom));
+            remove(nom);
         }
     }
 
@@ -77,8 +77,8 @@ public class InventaireInheritedH extends HashMap<String, Item> {
         StringBuilder bd = new StringBuilder(this.values().
                 stream()
                 .map(Item::toString)
-                .collect(Collectors.joining(","))
+                .collect(Collectors.joining(" , "))
         );
-        return bd.toString();
+        return String.format("%s : %d", bd, aPrixTotal);
     }
 }
