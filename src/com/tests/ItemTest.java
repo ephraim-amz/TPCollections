@@ -6,8 +6,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test cases for Item class
+ * @author ephraim
+ */
 class ItemTest {
     private Item itemTest;
+
+    /**
+     * 
+     * @throws Exception
+     */
     @BeforeEach
     void setUp() throws Exception {
         itemTest = new Item("test", 0);
