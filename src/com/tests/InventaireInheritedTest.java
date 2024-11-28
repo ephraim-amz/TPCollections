@@ -19,6 +19,9 @@ class InventaireInheritedTest {
     private Item secondItem;
     private Item thirdItem;
 
+    /**
+     * Set up method for variables used in various tests cases
+     */
     @BeforeEach
     void setUp() {
         inventaireInherited = new InventaireInherited();
@@ -31,8 +34,6 @@ class InventaireInheritedTest {
         inventaireInherited.add(secondItem);
         inventaireInherited.add(firstItem);
         inventaireInherited.add(thirdItem);
-
-
     }
 
     /**
