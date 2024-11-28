@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author ephraim
  */
-class InventaireInheritedSTest {
+public class InventaireInheritedSTest {
     private InventaireInheritedS inventaireInheritedS;
     private Item firstItem;
     private Item secondItem;
