@@ -18,9 +18,13 @@ class InventaireInheritedHTest {
     void setUp() {
         inventaireInheritedH = new InventaireInheritedH();
 
-        inventaireInheritedH.ajouterItem("firstItem", 25);
-        inventaireInheritedH.ajouterItem("secondItem", 50);
-        inventaireInheritedH.ajouterItem("thirdItem", 100);
+        firstItem = new Item("firstItem", 25);
+        secondItem = new Item("secondItem", 50);
+        thirdItem = new Item("thirdItem", 100);
+
+        inventaireInheritedH.ajouterItem(firstItem.getaNom(), firstItem.getaPrix());
+        inventaireInheritedH.ajouterItem(secondItem.getaNom(), secondItem.getaPrix());
+        inventaireInheritedH.ajouterItem(thirdItem.getaNom(), thirdItem.getaPrix());
     }
 
     /**
@@ -55,9 +59,7 @@ class InventaireInheritedHTest {
     @Test
     void enleverItem() {
         int currentInventaire = inventaireInheritedH.size();
-        System.out.println(inventaireInheritedH);
         inventaireInheritedH.enleverItem("secondItem");
-        System.out.println(inventaireInheritedH);
         assertEquals(currentInventaire - 1, inventaireInheritedH.size());
     }
 }
