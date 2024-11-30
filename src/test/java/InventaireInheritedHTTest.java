@@ -1,7 +1,6 @@
 package com.tests;
 
 import com.item.Item;
-import com.item_inheritance.InventaireInheritedH;
 import com.item_inheritance.InventaireInheritedHT;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

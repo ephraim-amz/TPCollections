@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Test cases for Item class
  * @author ephraim
  */
-public class ItemTest {
+ class ItemTest {
     private Item itemTest;
 
     /**

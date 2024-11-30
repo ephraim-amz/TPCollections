@@ -1,7 +1,6 @@
 package com.tests;
 
 import com.item.Item;
-import com.item_inheritance.InventaireInherited;
 import com.item_inheritance.InventaireInheritedS;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author ephraim
  */
-public class InventaireInheritedSTest {
+class InventaireInheritedSTest {
     private InventaireInheritedS inventaireInheritedS;
     private Item firstItem;
     private Item secondItem;
