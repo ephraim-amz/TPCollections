@@ -1,9 +1,6 @@
-name: CI Pipeline with mavan
+name: CI Pipeline with maven
 
 on:
-  push:
-    branches:
-      - maven-integration
   pull_request:
     branches:
       - main
