@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * Test cases for InventaireInherited class
  * @author ephraim
  */
-public class InventaireInheritedTest {
+class InventaireInheritedTest {
     private InventaireInherited inventaireInherited;
     private Item firstItem;
     private Item secondItem;
